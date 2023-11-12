@@ -9,93 +9,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'bio link',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('bio link'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
-    );
-  }
-
-  
-
-
-}
-
-class MyAppState extends StatelessWidget
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-/*class _MyHomePageState extends State<MyHomePage> {
-  var selectedIndex = 0;
-  @override
-  Widget build(BuildContext context) {
-    Widget page;
-    switch (selectedIndex) {
-      case 0:
-        page = GeneratorPage();
-        break;
-      case 1:
-        page = ;
-        break;
-      default:
-        throw UnimplementedError('no widget for $selectedIndex');
-    }
-    return LayoutBuilder(builder: (context, constraints) {
-      return Scaffold(
-        body: Row(
+    return const MaterialApp(
+        home: Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
           children: [
-            SafeArea(
-              child: NavigationRail(
-                extended: constraints.maxWidth >= 600,
-                destinations: [
-                  NavigationRailDestination(
-                    icon: Icon(Icons.home),
-                    label: Text('Home'),
-                  ),
-                  NavigationRailDestination(
-                    icon: Icon(Icons.favorite),
-                    label: Text('favorites'),
-                  ),
-                ],
-                selectedIndex: selectedIndex,
-                onDestinationSelected: (value) {
-                  setState(() {
-                    selectedIndex = value;
-                  });
-                },
-              ),
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('imagens/jose.jpg'),
             ),
-            Expanded(
-              child: Container(
-                color: Theme.of(context).colorScheme.primaryContainer,
-                child: page,
-              ),
-            ),
+            Text('José Augusto Pereira',
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Cinzel',
+                )),
+            Text(
+              'Estudante de Engenharia de Computação',
+              style: TextStyle(
+                  fontFamily: 'SourceCode',
+                  color: Colors.black87,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            )
           ],
         ),
-      );
-    });
+      ),
+    ));
   }
 }
-*/
-class GeneratorPage {
-  @override
-  Widget build(BuildContext context){
-    var appState = context.watch<MyAppState>();
-
-  }
-}
-
-
-

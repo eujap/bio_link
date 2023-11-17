@@ -11,61 +11,63 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Center(
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: AssetImage('imagens/jose.jpg'),
-                ),
-                Text('José Augusto Pereira',
-                    style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Cinzel',
-                    )),
-                Text(
-                  'Estudante de Engenharia de Computação',
-                  style: TextStyle(
-                      fontFamily: 'SourceCode',
-                      color: Colors.black87,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                Column(
+          backgroundColor: Colors.white,
+          body: SafeArea(
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Center(
+                child: Column(
                   children: [
-                    SizedBox(height: 10),
-                    ElevatedButton(
-                      onPressed: abrirLinkedin,
-                      child: Text('linkedin',
-                          style: TextStyle(
-                              fontFamily: 'SourceCode',
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold)),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('imagens/jose.jpg'),
                     ),
-                    SizedBox(height: 10),
-                    ElevatedButton(
-                      onPressed: abrirGitHub,
-                      child: Text('GitHub',
-                          style: TextStyle(
-                              fontFamily: 'SourceCode',
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold)),
-                    )
+                    Text('José Augusto Pereira',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Cinzel',
+                        )),
+                    Text(
+                      'Estudante de Engenharia de Computação',
+                      style: TextStyle(
+                          fontFamily: 'SourceCode',
+                          color: Colors.black87,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(height: 10),
+                        ElevatedButton(
+                          onPressed: abrirLinkedin,
+                          child: Text('LinkedIn',
+                              style: TextStyle(
+                                fontFamily: 'SourceCode',
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        SizedBox(height: 10),
+                        ElevatedButton(
+                          onPressed: abrirGitHub,
+                          child: Text('Portifolio Git Hub',
+                              style: TextStyle(
+                                  fontFamily: 'SourceCode',
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold)),
+                        )
+                      ],
+                    ),
                   ],
                 ),
-              ],
+              ),
             ),
           ),
-        ),
-      ),
-    ));
+        ));
   }
 }
 
